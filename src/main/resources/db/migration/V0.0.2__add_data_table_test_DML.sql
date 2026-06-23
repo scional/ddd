@@ -1,0 +1,8 @@
+INSERT INTO TABLE_TEST (VALEUR)
+VALUES ('Première valeur');
+
+INSERT INTO TABLE_TEST (VALEUR)
+VALUES ('Deuxième valeur');
+
+INSERT INTO TABLE_TEST (VALEUR)
+VALUES ('Troisième valeur');
