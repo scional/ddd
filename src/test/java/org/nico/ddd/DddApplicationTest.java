@@ -30,16 +30,11 @@ class DddApplicationTest {
 
   @Test
   void testControllerSignalements() throws Exception {
-    avisRepository.sauver(
-        Avis.builder()
-            .identifiant(new AvisId("id1"))
-            .note(new Note(1))
-            .message(new Message("Mon avis"))
-            .datePublication(LocalDateTime.now())
-            .build());
+    String identifiantAvis = "id1";
+    ajouterAvisAvecIdentifiant(identifiantAvis);
 
     Map<String, Object> body = new HashMap<>();
-    body.put("identifiant", "id1");
+    body.put("identifiant", identifiantAvis);
     mockMvc
         .perform(
             post("/signalements")
@@ -48,5 +43,15 @@ class DddApplicationTest {
                 .content(objectMapper.writeValueAsString(body)))
         .andDo(print())
         .andExpect(status().isCreated());
+  }
+
+  private void ajouterAvisAvecIdentifiant(String identifiant) {
+    avisRepository.sauver(
+        Avis.builder()
+            .identifiant(new AvisId(identifiant))
+            .note(new Note(1))
+            .message(new Message("Mon avis"))
+            .datePublication(LocalDateTime.now())
+            .build());
   }
 }
