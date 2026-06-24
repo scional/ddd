@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
-import org.nico.ddd.application.port.out.SignalementRepository;
 import org.nico.ddd.domain.entity.avis.AvisId;
 import org.nico.ddd.domain.entity.signalement.Signalement;
 import org.nico.ddd.domain.entity.signalement.SignalementId;
+import org.nico.ddd.domain.port.out.SignalementRepository;
 
 public class SignalementRepositoryFake implements SignalementRepository {
 

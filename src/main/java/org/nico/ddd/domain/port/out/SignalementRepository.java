@@ -1,4 +1,4 @@
-package org.nico.ddd.application.port.out;
+package org.nico.ddd.domain.port.out;
 
 import java.util.Optional;
 import org.nico.ddd.domain.entity.avis.AvisId;

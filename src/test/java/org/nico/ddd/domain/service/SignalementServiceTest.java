@@ -4,14 +4,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.LocalDateTime;
 import org.junit.jupiter.api.Test;
-import org.nico.ddd.application.port.out.AvisRepository;
-import org.nico.ddd.application.port.out.SignalementRepository;
 import org.nico.ddd.domain.entity.avis.Avis;
 import org.nico.ddd.domain.entity.avis.AvisId;
 import org.nico.ddd.domain.entity.avis.AvisRepositoryFake;
 import org.nico.ddd.domain.entity.avis.Message;
 import org.nico.ddd.domain.entity.avis.Note;
 import org.nico.ddd.domain.entity.signalement.SignalementRepositoryFake;
+import org.nico.ddd.domain.port.out.AvisRepository;
+import org.nico.ddd.domain.port.out.SignalementRepository;
 
 class SignalementServiceTest {
 

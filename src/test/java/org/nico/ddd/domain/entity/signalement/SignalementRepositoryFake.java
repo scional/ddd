@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
-import org.nico.ddd.application.port.out.SignalementRepository;
+import org.nico.ddd.domain.port.out.SignalementRepository;
 import org.nico.ddd.domain.entity.avis.AvisId;
 
 public class SignalementRepositoryFake implements SignalementRepository {
@@ -28,12 +28,11 @@ public class SignalementRepositoryFake implements SignalementRepository {
         .count();
   }
 
-
   @Override
   public Optional<Signalement> rechercherParIdentifiantAvis(String avisId) {
     return tousLesSignalements.values().stream()
-            .filter(signalement -> Objects.equals(signalement.identifiantAvis().identifiant(), avisId))
-            .findAny();
+        .filter(signalement -> Objects.equals(signalement.identifiantAvis().identifiant(), avisId))
+        .findAny();
   }
 
   @Override

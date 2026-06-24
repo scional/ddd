@@ -3,7 +3,7 @@ package org.nico.ddd.domain.entity.avis;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import org.nico.ddd.application.port.out.AvisRepository;
+import org.nico.ddd.domain.port.out.AvisRepository;
 
 public class AvisRepositoryFake implements AvisRepository {
 
