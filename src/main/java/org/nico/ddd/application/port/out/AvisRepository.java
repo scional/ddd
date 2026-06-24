@@ -9,4 +9,6 @@ public interface AvisRepository {
   void sauver(Avis avis);
 
   Optional<Avis> rechercher(AvisId identifiant);
+
+  void supprimer(AvisId identifiant);
 }

@@ -24,4 +24,9 @@ public class AvisRepositoryFake implements AvisRepository {
   public Optional<Avis> rechercher(AvisId identifiant) {
     return Optional.ofNullable(tousLesAvis.get(identifiant));
   }
+
+  @Override
+  public void supprimer(AvisId identifiant) {
+    tousLesAvis.remove(identifiant);
+  }
 }
